@@ -1,0 +1,39 @@
+/* UserDataTable.css */
+
+.user-data-table-container {
+    margin: 20px;
+  }
+  
+  .user-data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-data-table th, .user-data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .user-data-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .user-data-table tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .remove-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .remove-button:hover {
+    background-color: #d32f2f;
+  }
+  

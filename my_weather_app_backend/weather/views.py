@@ -20,10 +20,11 @@ class GetSpecificCityWeather(APIView):
     authentication_classes = [JWTAuthentication]
     def post(self, request):
         city = request.data.get('inputValue')
-        print(city,request.data,request)
+        
 
         apiKey = "b03a640e5ef6980o4da35b006t5f2942"
         url = f"https://api.shecodes.io/weather/v1/current?query={city}&key={apiKey}"
+        
         response = requests.get(url)
         if response.status_code == 200:
             return JsonResponse(response.json())

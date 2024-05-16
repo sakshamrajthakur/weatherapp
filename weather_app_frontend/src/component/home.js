@@ -76,11 +76,16 @@ const navigate = useNavigate()
                 }, body: JSON.stringify({ inputValue }),
               } );
               const data = await response.json();
+              setInputValue('')
+              if(data['message'])
+              (showAlert(data['message']))
       
-              setWeather({ data: response.data, loading: false, error: false });
+              setWeather({ data: data, loading: false, error: false });
             } catch (error) {
               setWeather({ data: {}, loading: false, error: true });
               console.log("error", error);
+              setInputValue('')
+              showAlert(error['message']+'. Token Expired')
             }
           };
   

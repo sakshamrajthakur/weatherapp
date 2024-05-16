@@ -49,7 +49,7 @@ class TokenRefresh(APIView):
     def post(self,request):
 
         refresh_token = request.data.get('refresh_token')
-        print('inside',refresh_token)
+        
         try:
             refresh = RefreshToken(refresh_token)
             access_token = str(refresh.access_token)
